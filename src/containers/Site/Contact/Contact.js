@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import ContactForm from './ContactForm/ContactForm'
 import { Route } from "react-router-dom";
 
-export default class Contact extends Component {
+class Contact extends Component {
     render() {
         return (
             <div>
@@ -25,3 +25,4 @@ export default class Contact extends Component {
         )
     }
 }
+export default Contact
