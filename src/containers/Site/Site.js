@@ -19,7 +19,7 @@ export default class Site extends Component {
                 <Switch>
                     <Route path="/" exact render={() => <Accueil/>}/>
                     <Route path="/localisation" render={() => <Localisation/>}/>
-                    <Route path="/contact" render={() => <Contact/>}/>
+                    <Route path="/contact" render={(props) => <Contact {...props}/>}/>
                     <Route render={() => <Erreur><Erreur404></Erreur404></Erreur>}/>
                 </Switch>
             </Container>
