@@ -1,34 +1,28 @@
 import React from 'react'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import { LinkContainer } from 'react-router-bootstrap' 
 
 const NavBar = (props) => {
     return (
         <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-            </ul>
-        </div>
-        </nav>
+        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar.Brand href="#home">Town</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            <LinkContainer to="/">
+                <Nav.Link>Accueil</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/localisation">
+                <Nav.Link>Localisation</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/contact">
+                <Nav.Link>Contact</Nav.Link>
+            </LinkContainer>
+            </Nav>
+        </Navbar.Collapse>
+        </Navbar>
         </div>
     )
 }
