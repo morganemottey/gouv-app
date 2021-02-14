@@ -19,7 +19,7 @@ const Etablissement = (props) => {
                 <strong>Horaire : </strong><br></br>
                 {props.horaires && <Horaires horaires={props.horaires}/>}
                 <br></br>
-                {props.url && <a href={props.url} className="btn btn-info" target="_blank">Visiter le site web !</a>}
+                {props.url && <a href={props.url} className="btn btn-info">Visiter le site web !</a>}
                 </Card.Text>
             </Card.Body>
             </Card>
